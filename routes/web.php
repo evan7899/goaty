@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Goat;
+use App\Http\Controllers\GoatsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,53 +15,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 //pour créer une chèvre
-Route::get('/goats/create', function (){
-    return view('goats.create');
-});
+Route::get('/goats/create', [GoatsController::class, 'create']);
 
 // affiche tout les goats
-Route::get('/goats', function () {
-    $goats=[
-        ['id'=> 0, 'nom'=>'boby','prix'=>50],
-        ['id'=> 1, 'nom'=>'bobo','prix'=>100],
-        ['id'=> 2, 'nom'=>'boba','prix'=>150],
-        ['id'=> 3, 'nom'=>'bobu','prix'=>200],
-    ];
-    return view('goats.index', compact('goats'));
-    
-    
-});
+Route::get('/goats', [GoatsController::class, 'index']);
 
 //persiste une chèvre dans la bdd
-Route::post('/goats', function (){
-    dd('POST goat');
-});
+Route::post('/goats', [GoatsController::class, 'store']);
 
 //affiche une goat voulu
-Route::get('/goats/{id}', function ($id){
-    $goats=[
-        ['id'=> 0, 'nom'=>'boby','prix'=>50],
-        ['id'=> 1, 'nom'=>'bobo','prix'=>100],
-        ['id'=> 2, 'nom'=>'boba','prix'=>150],
-        ['id'=> 3, 'nom'=>'bobu','prix'=>200],
-    ];
-    $goat = $goats[$id];
-    return view('goats.show', compact('goat'));
-});
+Route::get('/goats/{goat}', [GoatsController::class, 'show']);
 
+Route::get('/goats/{goat}/edit', [GoatsController::class, 'edit']);
 
+Route::patch('/goats/{goat}', [GoatsController::class, 'update']);
 
-/*Route::get('/goats', function (){
-    return view('store');
-});*/
+Route::delete('/goats/{goat}', [GoatsController::class, 'destroy']);
 
 Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/coucou',function (){
-    $nom = 'evan';
-    return view('coucou', [
-    'Lenom' => $nom
-    ]);
+    return redirect('/goats');
 });
