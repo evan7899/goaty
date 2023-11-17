@@ -4,15 +4,19 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Goat;
+use Carbon\Carbon;
 
-class GoatsController extends Controller
+class GoatController extends Controller
 {
     public function index(){
         $goats= Goat::all();
         return view('goats.index', compact('goats'));
     }
     public function show(Goat $goat){
-        return view('goats.show', compact('goat'));
+$birthdayString = $goat->birthday;
+$birthday = Carbon::parse($birthdayString);
+$dateformat = $birthday->isoFormat('LL');
+        return view('goats.show', compact('goat'), compact('dateformat'));
     }
     public function create(){
         return view('goats.create');

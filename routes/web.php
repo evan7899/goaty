@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Goat;
-use App\Http\Controllers\GoatsController;
+use App\Http\Controllers\GoatController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,24 +14,10 @@ use App\Http\Controllers\GoatsController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-//pour créer une chèvre
-Route::get('/goats/create', [GoatsController::class, 'create']);
 
-// affiche tout les goats
-Route::get('/goats', [GoatsController::class, 'index']);
-
-//persiste une chèvre dans la bdd
-Route::post('/goats', [GoatsController::class, 'store']);
-
-//affiche une goat voulu
-Route::get('/goats/{goat}', [GoatsController::class, 'show']);
-
-Route::get('/goats/{goat}/edit', [GoatsController::class, 'edit']);
-
-Route::patch('/goats/{goat}', [GoatsController::class, 'update']);
-
-Route::delete('/goats/{goat}', [GoatsController::class, 'destroy']);
 
 Route::get('/', function () {
-    return redirect('/goats');
+    return view('welcome');
 });
+
+Route::resource('goats', GoatController::class);

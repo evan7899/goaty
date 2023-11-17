@@ -4,21 +4,20 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 
+/**
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Goat>
+ */
 class GoatFactory extends Factory
 {
     /**
      * Define the model's default state.
      *
-     * @return array
+     * @return array<string, mixed>
      */
-    public function definition()
+    public function definition(): array
     {
         return [
-            'name' => $this->faker->name(),
-            'price'=> $this->faker->numberBetween(),
-            'color'=> $this->faker->colorName(),
-            'birthday'=> $this->faker->dateTimeThisCentury(),
-            'sex'=> $this->faker->boolean(),
+            //
         ];
     }
 }
