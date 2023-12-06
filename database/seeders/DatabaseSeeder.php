@@ -32,6 +32,13 @@ class DatabaseSeeder extends Seeder
         $u2->password = Hash::make("louannevandamme");
         $u2->save();
 
+        $u3 = new User;
+        $u3->name = "evanferrer";
+        $u3->email ="evanferrer@evanferrer.fr";
+        $u3->password = Hash::make("evanferrer");
+        $u3->is_admin =true;
+        $u3->save();
+
         $this->call([
             GoatSeeder::class,
         ]);
