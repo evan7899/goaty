@@ -1,10 +1,11 @@
-<a href="/goats"><img src = "/storage/app/public/img/goat_13.jpg"></a>
+<img src = "img/goat_13.jpg">
 
 ## About Goaty
 
 Voici un site où vous pouvez voir les chèvres que vous détenez et en déposer de nouvelle en les créants.
 En temps que utilisateurs connéctés sans privilèges vous pourrez voir et créer les chèvres.
 Pour les utilisateurs admin il sera possible de mettre à jour les chèvres et de les supprimer selon les besoins des utilisateurs.
+
 Ensuite sur le dashboard vous pourrez voir les goats que vous possédez et vous pourrez voir votre profil ou bien vous déconnectez.
 
 
