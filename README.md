@@ -1,4 +1,4 @@
-<img src = "img/goat_13.jpg">
+<img src = "img/goat_7.jpg">
 
 
 ## About Goaty
