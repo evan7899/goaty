@@ -24,10 +24,10 @@
                 @enderror
                 <div
                     class="flex items-center ps-4 border border-gray-500 rounded-lg bg-gray-700 border-gray-700 placeholder-gray-500 hover:bg-red-400">
-                    <input type="checkbox" name="sex" 
-                        class="border border-gray-500 rounded-xl py-3 px-3 bg-gray-700 border-gray-700 hover:bg-red-400">
+                    <input id="bordered-checkbox-1" type="checkbox" 
+                        name="sex" class="border border-gray-500 rounded-xl py-3 px-3 bg-gray-700 border-gray-700 hover:bg-red-400">
                     <label for="bordered-checkbox-1"
-                        class="rounded-lg w-full py-4 ms-2 text-sm font-medium text-gray-500 dark:text-gray-300 hover:bg-red-400">Femme
+                        class="rounded-lg w-full py-4 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300 hover:bg-red-400">Femme
                         ?</label>
                 </div>
                 <input type="date" name="birthday" placeholder="date de naissance" value="{{ old('birthday') }}"
