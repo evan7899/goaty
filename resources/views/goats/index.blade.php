@@ -97,7 +97,7 @@
                    </tr>
                @empty
                    <tr>
-                       <td colspan="8" class="text-center">NO ONE HERE</td>
+                       <td colspan="8" class="text-right text-6xl text-black">NO ONE HERE</td>
                    </tr>
                @endforelse
            </tbody>
