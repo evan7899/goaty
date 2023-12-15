@@ -8,34 +8,39 @@
             <form method="post" action="/goats" id='container' class="flex flex-col space-y-8 mt-10" enctype="multipart/form-data">
                 @csrf
                 <input type="text" name="name" placeholder="son nom" value="{{ old('name') }}"
-                    class="border rounded-lg py-3 px-3 bg-gray-700 border-gray-700 placeholder-gray-500 transition hover:bg-red-400">
+                    class="border border-gray-500 rounded-lg py-3 px-3 bg-gray-700 border-gray-700 placeholder-gray-500 transition hover:bg-red-400">
                 @error('name')
                     <p>{{ $message }}</p>
                 @enderror
                 <input type="number" name="price" placeholder= "et combien elle coûte" value="{{ old('price') }}"
-                    class="border rounded-lg py-3 px-3 bg-gray-700 border-gray-700 placeholder-gray-500 transition hover:bg-red-400">
+                    class="border border-gray-500 rounded-lg py-3 px-3 bg-gray-700 border-gray-700 placeholder-gray-500 transition hover:bg-red-400">
                 @error('price')
                     <p>{{ $message }}</p>
                 @enderror
                 <input type="text" name="color" placeholder="sa couleur" value="{{ old('color') }}"
-                    class="border rounded-lg py-3 px-3 bg-gray-700 border-gray-700 placeholder-gray-500 transition hover:bg-red-400">
+                    class="border border-gray-500 rounded-lg py-3 px-3 bg-gray-700 border-gray-700 placeholder-gray-500 transition hover:bg-red-400">
                 @error('color')
                     <p>{{ $message }}</p>
                 @enderror
                 <div
-                    class="flex items-center ps-4 border rounded-lg bg-gray-700 border-gray-700 placeholder-gray-500 hover:bg-red-400">
+                    class="flex items-center ps-4 border border-gray-500 rounded-lg bg-gray-700 border-gray-700 placeholder-gray-500 hover:bg-red-400">
                     <input type="checkbox" name="sex" 
-                        class="border rounded-xl py-3 px-3 bg-gray-700 border-gray-700 hover:bg-red-400">
+                        class="border border-gray-500 rounded-xl py-3 px-3 bg-gray-700 border-gray-700 hover:bg-red-400">
                     <label for="bordered-checkbox-1"
-                        class="rounded-lg w-full py-4 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300 hover:bg-red-400">Femme
+                        class="rounded-lg w-full py-4 ms-2 text-sm font-medium text-gray-500 dark:text-gray-300 hover:bg-red-400">Femme
                         ?</label>
                 </div>
                 <input type="date" name="birthday" placeholder="date de naissance" value="{{ old('birthday') }}"
-                    class="border rounded-lg py-3 px-3 bg-gray-700 border-gray-700 placeholder-gray-500 transition hover:bg-red-400">
+                    class="border rounded-lg py-3 px-3 bg-gray-700 border-gray-500 placeholder-gray-500 transition hover:bg-red-400 ">
                 @error('birthday')
                     <p>{{ $message }}</p>
                 @enderror
-                <input type="file" name="image" value="{{old("image")}}">
+                <input type="file" name="image" value="{{old("image")}}" class="text-sm text-stone-500
+                file:mr-5 file:py-1 file:px-3 file:border-[1px]
+                file:text-xs file:font-medium
+                file:bg-stone-50 file:text-stone-700
+                hover:file:cursor-pointer hover:file:bg-blue-50
+                hover:file:text-blue-700">
                 <button class="border bg-black text-white rounded-lg py-3 font-semibold hover:bg-red-500">Valider</button>
             </form>
         @endsection
