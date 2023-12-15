@@ -6,21 +6,21 @@
                <p class ="text-right">
                    <a href ="/dashboard">
                        <button
-                           class="border border-black bg-black text-white rounded-lg py-3 font-semibold hover:bg-red-400 px-10">
+                           class=" bg-black text-white rounded-lg py-3 font-semibold hover:bg-red-400 px-10">
                            &bull;Go to Dashboard&bull;
                        </button>
                    </a>
                </p>
            @else
                <button
-                   class="border border-red-500 bg-red-500 text-white rounded-lg py-3 font-semibold hover:bg-black px-10"><a
+                   class=" bg-black text-white rounded-lg py-3 font-semibold hover:bg-red-400 px-10"><a
                        href="{{ route('login') }}"
                        class="font-semibold text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log
                        in</a></button>
                <button
-                   class="border border-red-500 bg-red-500 text-white rounded-lg py-3 font-semibold hover:bg-black px-10"><a
+                   class=" bg-black text-white rounded-lg py-3 font-semibold hover:bg-red-400 px-10"><a
                        href="{{ route('register') }}"
-                       class="ml-4 font-semibold text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a></button>
+                       class=" font-semibold text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a></button>
            @endif
        </div>
 
@@ -104,7 +104,7 @@
        </table><br>
        <p class="text-center">
            <a href="/goats/create">
-               <button class="border border-black bg-black text-white rounded-lg py-3 font-semibold hover:bg-red-400 px-10">
+               <button class=" bg-black text-white rounded-lg py-3 font-semibold hover:bg-red-400 px-10">
                    &bull;Create a Goat&bull;
                </button>
            </a>

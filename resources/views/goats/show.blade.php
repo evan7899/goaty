@@ -35,6 +35,6 @@
         </tr>
 </tbody>
 </table>
-<p class="text-center"><a href="/goats"><button class="border border-black bg-black text-white rounded-lg py-3 font-semibold hover:bg-red-400 px-10">&bull;Go back to Goats&bull;</button></a></p>
+<p class="text-center"><a href="/goats"><button class=" bg-black text-white rounded-lg py-3 font-semibold hover:bg-red-400 px-10">&bull;Go back to Goats&bull;</button></a></p>
 </div>
 @endsection
