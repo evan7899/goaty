@@ -3,8 +3,7 @@
 <table class="mx-auto text-sm text-left rtl:text-right text-gray-500">
     <thead class="text-xs text-gray-700 uppercase bg-gray-100 shadow-xl">
             <tr class="shadow rounded transition hover:bg-red-400">
-                    <th scope="col" class="px-6 py-3">id</th>
-                    <x-th>name</x-th>
+                    <th scope="col" class="px-6 py-3">name</th>
                     <x-th>price</x-th>
                     <x-th>color</x-th>
                     <x-th>sex</x-th>
@@ -15,7 +14,6 @@
 
     @foreach(Auth::user()->goats as $goat)
     <tr class="shadow-md rounded">
-        <x-td>{{$goat->id}}</x-td>
         <x-td>{{$goat->name}}</x-td>
         <x-td>{{$goat->price}} €</x-td>
         <x-td>{{$goat->color}}</x-td>
