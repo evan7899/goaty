@@ -58,7 +58,7 @@
                        <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
                            {{ $goat->sex ? 'Female' : 'Male' }}</td>
                        <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                           {{ $goat->birthday }}</td>
+                        {{ \Carbon\Carbon::parse($goat->birthday)->isoFormat('LL') }}</td>
                        <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
                            @if ($goat->owner)
                                {{ $goat->owner->name }}

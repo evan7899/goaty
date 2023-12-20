@@ -1,7 +1,7 @@
 @extends('layout')
 @section('main')        
 <div class="relative overflow-x-auto">
-        <img class="h-15 w-1/2 flex-none rounded-full bg-gray-50 mx-auto" src="/storage/{{$goat->image_path}}" alt=""><br>
+        <img class="h-15 w-1/2 flex-none rounded-full bg-gray-50 mx-auto mt-8" src="/storage/{{$goat->image_path}}" alt=""><br>
 <table class="mx-auto text-sm text-left rtl:text-right text-gray-500">
         <thead class="text-xs text-gray-700 uppercase bg-gray-100">
                 <tr>

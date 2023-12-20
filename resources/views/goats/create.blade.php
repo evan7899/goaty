@@ -2,6 +2,7 @@
 @section('main')
     <div class="flex justify-center">
         <div class="bg-gray-800 border border-gray-900 rounded-lg px-8 py-10 w-9/12">
+            <p class="text-right"><a href="/goats"><button class=" bg-black text-white rounded-lg py-3 font-semibold hover:bg-red-400 px-10">&bull;Go back to Goats&bull;</button></a></p>
             <div class="text-white mt-10">
                 <h2 class="text-center">&bull;Create a GOAT&bull;</h2>
             </div>
@@ -35,12 +36,12 @@
                 @error('birthday')
                     <p>{{ $message }}</p>
                 @enderror
-                <input type="file" name="image" value="{{old("image")}}" class="text-sm text-stone-500
+                <input type="file" name="image" value="{{old("image")}}" placeholder ="choisir une image" class="text-sm text-stone-500
                 file:mr-5 file:py-1 file:px-3 file:border-[1px]
                 file:text-xs file:font-medium
                 file:bg-stone-50 file:text-stone-700
                 hover:file:cursor-pointer hover:file:bg-blue-50
                 hover:file:text-blue-700">
-                <button class="border bg-black text-white rounded-lg py-3 font-semibold hover:bg-red-500">Valider</button>
+                <button class="border bg-bla ck text-white rounded-lg py-3 font-semibold hover:bg-red-500">Valider</button>
             </form>
         @endsection

@@ -2,6 +2,7 @@
 @section('main')
     <div class="flex justify-center h-auto">
         <div class="bg-gray-800 flex flex-col border border-gray-900 rounded-lg px-8 py-10 w-9/12">
+            <p class="text-right"><a href="/goats"><button class=" bg-black text-white rounded-lg py-3 font-semibold hover:bg-red-400 px-10">&bull;Go back to Goats&bull;</button></a></p>
             <div class="text-white">
                 <h2 class="text-center">&bull;Update a GOAT&bull;</h2>
             </div><br>
