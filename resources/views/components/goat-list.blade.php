@@ -15,7 +15,7 @@
     @foreach(Auth::user()->goats as $goat)
     <tr class="shadow-md rounded">
         <x-td>{{$goat->name}}</x-td>
-        <x-td>{{$goat->price}} €</x-td>
+        <x-td>{{$goat->price}} $</x-td>
         <x-td>{{$goat->color}}</x-td>
         <x-td>{{ $goat->sex ? 'Female' : 'Male' }}</x-td>
         <x-td>{{ \Carbon\Carbon::parse($goat->birthday)->isoFormat('LL') }}</x-td>

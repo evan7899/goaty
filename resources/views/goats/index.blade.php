@@ -52,7 +52,7 @@
         {{ $loop->last ? 'rounded-bl-xl' : '' }}">
                            {{ $goat->name }}</td>
                        <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">{{ $goat->price }}
-                           €</td>
+                           $</td>
                        <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">{{ $goat->color }}
                        </td>
                        <td scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
