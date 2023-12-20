@@ -19,8 +19,8 @@
         <x-td>{{$goat->name}}</x-td>
         <x-td>{{$goat->price}} €</x-td>
         <x-td>{{$goat->color}}</x-td>
-        <x-td>{{$goat->sex}}</x-td>
-        <x-td>{{$goat->birthday}}</x-td>
+        <x-td>{{ $goat->sex ? 'Female' : 'Male' }}</x-td>
+        <x-td>{{ \Carbon\Carbon::parse($goat->birthday)->isoFormat('LL') }}</x-td>
         <x-td>{{$goat->owner->name}}</x-td>
     </tr>
     @endforeach

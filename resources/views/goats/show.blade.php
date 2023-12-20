@@ -22,7 +22,7 @@
         <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">{{$goat->name}}</th>
         <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">{{$goat->price}} €</th>
         <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">{{$goat->color}}</th>
-        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">{{$goat->sex}}</th>
+        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">{{ $goat->sex ? 'Female' : 'Male' }}</th>
         <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">{{$dateformat}}</th>
         <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
         @if ($goat->owner)

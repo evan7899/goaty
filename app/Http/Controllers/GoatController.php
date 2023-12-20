@@ -49,7 +49,12 @@ class GoatController extends Controller
     }
 
     public function edit(Goat $goat){
-    return view('goats.edit', compact('goat'));
+            // dd( $goat->sex);
+        $goat = Goat::find($goat->id);
+        $isFemale = $goat->sex === 'Female';
+        
+
+    return view('goats.edit', compact('goat', 'isFemale'));
     }
     public function destroy(Goat $goat){
     $goat->delete();
@@ -71,11 +76,11 @@ class GoatController extends Controller
 
   // creer goat
         $g=new Goat();
-        $g->name = request()->name;
-        $g->price = request()->price;
-        $g->color = request()->color;
-        $g->sex = request()->sex == 'on' ? true : false ;
-        $g->birthday = request()->birthday;
+        $g->name = $request->input('name');
+        $g->price = $request->input('price');
+        $g->color = $request->input('color');
+        $g->sex = $request->input('sex') == 'on' ? true : false ;
+        $g->birthday = $request->input('birthday');
         $g->image_path = $path;
         $g->user_id = Auth::user() ? Auth::user()->id : 0;
         $g->save();
